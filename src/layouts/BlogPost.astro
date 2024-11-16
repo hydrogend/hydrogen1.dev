@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import FormattedDate from '@/components/FormattedDate.astro';
+import type { BlogPost } from '@/content';
+import Base  from '@/layouts/Base.astro';
+
+type Props = BlogPost;
+
+const { title, description, post, update } = Astro.props;
+---
+
+<Base title={title} description={description} type='article'>
+	<article>
+		<div class="prose">
+			<div class="title">
+				<div class="date">
+					<FormattedDate date={post} />
+					{
+						update && (
+							<div class="last-updated-on">
+								最終更新日: <FormattedDate date={update} />
+							</div>
+						)
+					}
+				</div>
+				<h1>{title}</h1>
+				<hr />
+			</div>
+			<slot />
+		</div>
+	</article>
+</Base>

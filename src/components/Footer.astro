@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import ccby_img from '@/assets/cc-by.png';
+const today = new Date();
+---
+
+<footer class="pt-[2rem] pr-[1rem] pb-[6rem] pl-[1rem] text-center items-center">
+	<div>
+		<a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.ja">
+			<Image src={ccby_img} alt="CC BY 4.0" width="88" height="31" class="rounded-none"/>
+		</a>
+		<span>
+			特に記載のない場合、本サイトのコンテンツは<a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.ja">CC BY 4.0</a>で提供されています。
+		</span>
+	</div>
+	<p>Built with <a href="https://astro.build/">{Astro.generator}</a></p>
+</footer>
+<style>
+	footer {
+		background: linear-gradient(var(--gray-gradient)) no-repeat;
+		color: rgb(var(--gray));
+	}
+</style>

@@ -1,0 +1,28 @@
+---
+import Base from '@/layouts/Base.astro';
+import { allBlogPosts } from '@/content';
+import FormattedDate from '@/components/FormattedDate.astro';
+
+const posts = [...allBlogPosts].sort(
+	(a, b) => b.data.post.valueOf() - a.data.post.valueOf(),
+);
+---
+
+<Base title='Blog' type='website'>
+	<section>
+		<ul>
+			{
+				posts.map((post) => (
+					<li>
+						<a href={`/blog/${post.slug}/`}>
+							<h4 class="title">{post.data.title}</h4>
+							<p class="date">
+								<FormattedDate date={post.data.post} />
+							</p>
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</section>
+</Base>
