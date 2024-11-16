@@ -1,0 +1,18 @@
+---
+import Base from '@/layouts/Base.astro'
+import { allTags } from '@/content';
+
+const sorted = [...allTags].sort((a,b) => a.tag.localeCompare(b.tag))
+    .sort((a, b) => b.count - a.count);
+---
+<Base title="Blog" type="website">
+    <ul class="list-inside list-disc mt-4">
+        {sorted.map(({ tag, count }) => (
+            <li>
+                <a href={`/blog/tag/${tag}`} class="underline hover:opacity-75">
+                    {tag} ({count})
+                </a>
+            </li>
+        ))}
+    </ul>
+</Base>
