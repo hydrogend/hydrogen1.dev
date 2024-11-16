@@ -1,7 +1,7 @@
 ---
 import Base from '@/layouts/Base.astro';
 import { allBlogPosts } from '@/content';
-import FormattedDate from '@/components/FormattedDate.astro';
+import BlogPosts from '@/components/BlogPosts.astro';
 
 const posts = [...allBlogPosts].sort(
 	(a, b) => b.data.post.valueOf() - a.data.post.valueOf(),
@@ -10,19 +10,6 @@ const posts = [...allBlogPosts].sort(
 
 <Base title='Blog' type='website'>
 	<section>
-		<ul>
-			{
-				posts.map((post) => (
-					<li>
-						<a href={`/blog/${post.slug}/`}>
-							<h4 class="title">{post.data.title}</h4>
-							<p class="date">
-								<FormattedDate date={post.data.post} />
-							</p>
-						</a>
-					</li>
-				))
-			}
-		</ul>
+		<BlogPosts posts={posts} />
 	</section>
 </Base>

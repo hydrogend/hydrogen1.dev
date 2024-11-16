@@ -11,6 +11,7 @@
 	--gray: 96, 115, 159;
 	--gray-light: 229, 233, 240;
 	--gray-dark: 34, 41, 57;
+	--bg-gray: #717171;
 	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
@@ -39,11 +40,11 @@ body {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
-	font-size: 20px;
+	font-size: 16px;
 	line-height: 1.7;
 }
 main {
-	max-width: calc(100% - 2em);
+	max-width: calc(100% - 2rem);
 }
 h1,
 h2,
@@ -56,19 +57,19 @@ h6 {
 	line-height: 1.2;
 }
 h1 {
-	font-size: 3.052em;
+	font-size: 2rem;
 }
 h2 {
-	font-size: 2.441em;
+	font-size: 1.7rem;
 }
 h3 {
-	font-size: 1.953em;
+	font-size: 1.4rem;
 }
 h4 {
-	font-size: 1.563em;
+	font-size: 1.25rem;
 }
 h5 {
-	font-size: 1.25em;
+	font-size: 1.1rem;
 }
 strong,
 b {
@@ -81,17 +82,17 @@ a {
 	}
 }
 p {
-	margin-bottom: 1em;
+	margin-bottom: 1rem;
 }
-.prose p {
-	margin-bottom: 2em;
+article p {
+	margin-bottom: 1.5rem;
 }
 textarea {
 	width: 100%;
-	font-size: 16px;
+	font-size: 1rem;
 }
 input {
-	font-size: 16px;
+	font-size: 1rem;
 }
 table {
 	width: 100%;
@@ -99,7 +100,6 @@ table {
 img {
 	max-width: 100%;
 	height: auto;
-	border-radius: 8px;
 }
 code {
 	padding: 2px 5px;
@@ -108,7 +108,7 @@ code {
 	font-family: 'JetBrains Mono', monospace;
 }
 pre {
-	padding: 1.5em;
+	padding: 1.5rem;
 	border-radius: 8px;
 	>code {
 		all: unset;
@@ -116,9 +116,9 @@ pre {
 }
 blockquote {
 	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
+	padding: 0 0 0 1rem;
 	margin: 0px;
-	font-size: 1.333em;
+	font-size: 1.2rem;
 }
 hr {
 	border: none;
@@ -126,7 +126,7 @@ hr {
 }
 @media (max-width: 720px) {
 	body {
-		font-size: 18px;
+		font-size: 14px;
 	}
 	main {
 		padding: 1em;

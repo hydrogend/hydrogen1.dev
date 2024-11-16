@@ -1,0 +1,32 @@
+---
+import type { GetStaticPaths } from "astro";
+import Base from "@/layouts/Base.astro"
+import { allBlogPosts, digestSlug, type BlogPostMeta } from "@/content"
+import BlogPosts from "@/components/BlogPosts.astro";
+
+export const getStaticPaths = (() => {
+    const years: Record<number, BlogPostMeta[]> = {};
+    allBlogPosts.forEach((post) => {
+        const year = digestSlug(post.slug).year;
+        if (!years[year]) {
+            years[year] = [post];
+        } else {
+            years[year].push(post);
+        }
+    });
+    return Object.entries(years).map(([year, posts]) => {
+        return {
+            params: { year: year },
+            props: { year, posts }
+        };
+    });
+}) satisfies GetStaticPaths;
+
+const { year, posts } = Astro.props;
+posts.sort((a, b) => b.data.post.valueOf() - a.data.post.valueOf());
+---
+
+<Base title={`${year}年の記事一覧`} type="website" noindex={true}>
+    <h1 class="text-center">{year}年 {posts.length}件の記事</h1>
+    <BlogPosts posts={posts} />
+</Base>

@@ -1,31 +1,47 @@
 ---
-import FormattedDate from '@/components/FormattedDate.astro';
-import type { BlogPost } from '@/content';
-import Base  from '@/layouts/Base.astro';
+import FormattedDate from "@/components/FormattedDate.astro";
+import type { BlogPost } from "@/content";
+import Base from "@/layouts/Base.astro";
+import { Image } from "astro:assets";
+
+import TagIcon from "@/assets/topecon-heroes-tag.svg";
 
 type Props = BlogPost;
 
-const { title, description, post, update } = Astro.props;
+const { title, description, post, update, tags } = Astro.props;
 ---
 
-<Base title={title} description={description} type='article'>
-	<article>
-		<div class="prose">
-			<div class="title">
-				<div class="date">
-					<FormattedDate date={post} />
-					{
-						update && (
-							<div class="last-updated-on">
-								最終更新日: <FormattedDate date={update} />
-							</div>
-						)
-					}
+<Base title={title} description={description} type="article">
+	<article class="box-border p-6 my-4 border-solid">
+		<div>
+			<h1>{title}</h1>
+			<div class="date">
+				<div class="posted-on">
+					投稿日: <FormattedDate date={post} />
 				</div>
-				<h1>{title}</h1>
-				<hr />
+				{
+					update && (
+						<div class="last-updated-on">
+							最終更新日: <FormattedDate date={update} />
+						</div>
+					)
+				}
 			</div>
-			<slot />
+			<div class="tags">
+				<Image src={TagIcon} alt="Tags" class="w-5 h-5 inline" />
+				{tags.map((tag) => (
+					<a href={`/blog/tag/${tag}`} class="tag">
+						{tag}
+					</a>
+				))}
+			</div>
+			<hr />
 		</div>
+		<slot />
 	</article>
 </Base>
+<style>
+article {
+	box-shadow: 0 0 5px #444;
+}
+</style>

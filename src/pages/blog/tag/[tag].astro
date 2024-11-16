@@ -2,6 +2,7 @@
 import type { GetStaticPaths } from "astro";
 import { allTags, getBlogPostsByTag } from "@/content";
 import Base from "@/layouts/Base.astro";
+import BlogPosts from "@/components/BlogPosts.astro";
 
 export const getStaticPaths = (() => {
     return allTags.map(({tag}) => {
@@ -18,12 +19,5 @@ posts.sort((a, b) => b.data.post.valueOf() - a.data.post.valueOf());
 
 <Base title={`Tag for ${tagName}`} type="website">
     <h1 class="text-center">{tagName} {posts.length}件の記事</h1>
-    <ul class="list-inside list-disc mt-4">
-        {posts.map((post) => (
-            <li>
-                <a href={`/blog/${post.slug}`} class="underline hover:opacity-75">
-                    {post.data.title}
-                </a>
-            </li>
-        ))}
-    </ul>
+    <BlogPosts posts={posts} />
+</Base>
