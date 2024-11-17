@@ -13,56 +13,55 @@ const latestPosts = [...allBlogPosts]
 ---
 
 <Base title="Home" type="website">
-    <h2>Blog</h2>
-    <div class="flex flex-col gap-3 pl-2">
-        <div class="flex flex-row items-start gap-3">
-            <p class="m-0 flex-none text-lg font-semibold">タグランキング</p>
-            <div class="mx-0 my-auto flex flex-wrap">
-                {
-                    tagsRanking.map(({ tag, count }) => (
-                        <span class="p-1">
-                            <a class="text-black" href={`/blog/tag/${tag}`}>
-                                {tag} ({count})
-                            </a>
-                        </span>
-                    ))
-                }
-                <span class="p-1"
-                    ><a class="text-black" href="/blog/tag/">もっと見る...</a
-                    ></span
-                >
+    <div class="my-4 text-center">
+        <h1>Hydrogen's Siteにようこそ!</h1>
+    </div>
+    <div class="my-4">
+        <h2>Blog</h2>
+        <div class="flex flex-col gap-3 pl-2">
+            <div class="flex flex-row items-start gap-3">
+                <p class="m-0 flex-none text-lg font-semibold">タグランキング</p>
+                <div class="mx-0 my-auto flex flex-wrap">
+                    {
+                        tagsRanking.map(({ tag, count }) => (
+                            <span class="p-1">
+                                <a class="text-black" href={`/blog/tag/${tag}`}>
+                                    {tag} ({count})
+                                </a>
+                            </span>
+                        ))
+                    }
+                    <span class="p-1"><a class="text-black" href="/blog/tag/">もっと見る...</a></span>
+                </div>
+            </div>
+            <div class="flex flex-row items-start gap-3">
+                <p class="m-0 flex-none text-lg font-semibold">最新記事</p>
+                <ul class="mx-0 my-auto list-disc list-inside">
+                    {
+                        latestPosts.map(({ data, slug }) => {
+                            const { year, rest } = digestSlug(slug);
+                            return (
+                                <li class="p-1">
+                                    <a class="text-black" href={`/blog/${year}/${rest}/`}>
+                                        {data.title}
+                                    </a>
+                                </li>
+                            );
+                        })
+                    }
+                    <li class="p-1">
+                        <a class="text-black" href="/blog/">もっと見る...</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="flex flex-row items-start gap-3">
-            <p class="m-0 flex-none text-lg font-semibold">最新記事</p>
-            <ul class="mx-0 my-auto list-disc list-inside">
-                {
-                    latestPosts.map(({ data, slug }) => {
-                        const { year, rest } = digestSlug(slug);
-                        return (
-                            <li class="p-1">
-                                <a
-                                    class="text-black"
-                                    href={`/blog/${year}/${rest}/`}
-                                >
-                                    {data.title}
-                                </a>
-                            </li>
-                        );
-                    })
-                }
-                <li class="p-1">
-                    <a class="text-black" href="/blog/">もっと見る...</a>
-                </li>
-            </ul>
-        </div>
     </div>
-    <h2>Links</h2>
-    <ul>
-        <li><a href="https://x.com/Hydrogen_D1">Twitter (@Hydrogen_D1)</a></li>
-        <li>
-            <a href="https://bsky.app/profile/hydrogen1.dev">BlueSky (@hydrogen1.dev)</a>
-        </li>
-        <li><a href="https://github.com/hydrogend">GitHub (@hydrogend)</a></li>
-    </ul>
+    <div class="my-4">
+        <h2>Links</h2>
+        <ul>
+            <li><a href="https://x.com/Hydrogen_D1">Twitter (@Hydrogen_D1)</a></li>
+            <li><a href="https://bsky.app/profile/hydrogen1.dev">BlueSky (@hydrogen1.dev)</a></li>
+            <li><a href="https://github.com/hydrogend">GitHub (@hydrogend)</a></li>
+        </ul>
+    </div>
 </Base>
