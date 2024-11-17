@@ -2,7 +2,8 @@
 title: "テスト用ページ"
 description: "これはテスト用ページです"
 post: "2024-11-16T18:00"
-tags: ["Test"]
+update: "2024-11-19T16:00"
+tags: ["Test", "Test2", "LONGLONGLONGLONGLONGLONG"]
 draft: true
 ---
 
@@ -26,8 +27,17 @@ draft: true
 ```java
 // Javaコードのサンプル
 public class Main {
+    /**
+     * メインメゾット
+     * @params args コマンドライン引数
+     */
+    @SomeAnnotation
     public static void main(String[] args) {
         System.out.println("Hello World!");
+        final var len = args.length;
+        if(len >= 3) {
+            System.err.println("Too many options!");
+        }
     }
 }
 ```

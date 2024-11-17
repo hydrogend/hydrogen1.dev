@@ -12,7 +12,7 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
 
 {isActive ? <span class:list={[className, "underline"]}>
 	<slot />
-</span> : <a href={href} class:list={[className, "underline", "ease-in-out", "delay-200", "decoration-transparent", "hover:decoration-black"]} {...props}>
+</span> : <a href={href} class:list={[className, "underline", "ease-in-out", "delay-200", "duration-200", "decoration-transparent", "hover:decoration-black"]} {...props}>
 	<slot />
 </a>}
 <style>
