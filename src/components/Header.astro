@@ -3,12 +3,15 @@ import HeaderLink from './HeaderLink.astro';
 ---
 
 <header class="m-0 px-4 py-0 bg-gray-100 ">
-	<nav class="flex items-center justify-between">
-		<h2 class="m-0 text-base"><a href="/" class="no-underline">Hydrogen's Site</a></h2>
+	<nav class="flex items-center justify-between align-middle">
+		<h2 class="m-0 text-xl">
+			<div class="bg-black rounded-full inline-block w-6 mt-2 before:pt-[100%] before:block"></div>
+			<a href="/" class="no-underline">Hydrogen's Site</a>
+		</h2>
 		<div class="">
 			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
+			<HeaderLink href="/about/">About</HeaderLink>
+			<HeaderLink href="/blog/">Blog</HeaderLink>
 		</div>
 	</nav>
 </header>
