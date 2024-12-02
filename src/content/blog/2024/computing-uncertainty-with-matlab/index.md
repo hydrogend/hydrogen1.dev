@@ -4,7 +4,6 @@ description: "Symbolic Math Toolboxを利用した不確かさの計算の自動
 post: "2024-12-03T00:00"
 #update: "2024-11-19T16:00"
 tags: ["hydrogen Advent Calender 2024", "MATLAB", "Symbolic Math Toolbox"]
-draft: true
 ---
 
 この記事は[hydrogen Advent Calender 2024](https://adventar.org/calendars/10672)の3日目の記事です。
