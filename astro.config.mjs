@@ -10,7 +10,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://hydrogen1.dev',
+    site: 'https://www.hydrogen1.dev',
     integrations: [mdx(), sitemap(), tailwind()],
     markdown: {
         remarkPlugins: [remarkMath],
