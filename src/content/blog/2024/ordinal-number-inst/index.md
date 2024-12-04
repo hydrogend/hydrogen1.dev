@@ -4,7 +4,6 @@ description: "hydrogen Advent Calender 2024 day 5"
 pubDate: "2024-12-05T11:15"
 # update: "2024-11-19T16:00"
 tags: ["hydrogen Advent Calender 2024", "数学", "集合論", "ZFC公理系"]
-draft: true
 ---
 
 この記事は[hydrogen Advent Calender 2024](https://adventar.org/calendars/10672)の5日目の記事です。
