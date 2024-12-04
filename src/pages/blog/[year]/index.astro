@@ -23,7 +23,7 @@ export const getStaticPaths = (() => {
 }) satisfies GetStaticPaths;
 
 const { year, posts } = Astro.props;
-posts.sort((a, b) => b.data.post.valueOf() - a.data.post.valueOf());
+posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <Base title={`${year}年の記事一覧`} type="website" noindex={true}>

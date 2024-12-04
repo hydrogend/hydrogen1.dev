@@ -1,7 +1,7 @@
 ---
 title: "MATLABで合成不確かさを計算する"
 description: "Symbolic Math Toolboxを利用した不確かさの計算の自動化"
-post: "2024-12-03T00:00"
+pubDate: "2024-12-03T00:00"
 #update: "2024-11-19T16:00"
 tags: ["hydrogen Advent Calender 2024", "MATLAB", "Symbolic Math Toolbox"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "ZFC公理系の話"
 description: "hydrogen Advent Calender 2024 day 4"
-post: "2024-12-04T11:15"
+pubDate: "2024-12-04T11:15"
 # update: "2024-11-19T16:00"
 tags: ["hydrogen Advent Calender 2024", "数学", "集合論", "ZFC公理系"]
 ---

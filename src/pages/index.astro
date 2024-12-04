@@ -8,7 +8,7 @@ const tagsRanking = [...allTags]
     .slice(0, 5);
 
 const latestPosts = [...allBlogPosts]
-    .sort((a, b) => b.data.post.getTime() - a.data.post.getTime())
+    .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
     .slice(0, 5);
 ---
 

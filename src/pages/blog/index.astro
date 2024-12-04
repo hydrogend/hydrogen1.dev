@@ -4,7 +4,7 @@ import { allBlogPosts } from '@/content';
 import BlogPosts from '@/components/BlogPosts.astro';
 
 const posts = [...allBlogPosts].sort(
-	(a, b) => b.data.post.valueOf() - a.data.post.valueOf(),
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 

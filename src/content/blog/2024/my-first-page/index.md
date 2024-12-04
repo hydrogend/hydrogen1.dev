@@ -1,7 +1,7 @@
 ---
 title: "テスト用ページ"
 description: "これはテスト用ページです"
-post: "2024-11-16T18:00"
+pubDate: "2024-11-16T18:00"
 update: "2024-11-19T16:00"
 tags: ["Test", "Test2", "LONGLONGLONGLONGLONGLONG"]
 draft: true
