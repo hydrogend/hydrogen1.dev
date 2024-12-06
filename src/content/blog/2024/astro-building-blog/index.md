@@ -8,7 +8,10 @@ tags: ["maccha Advent Calender 2024", "Astro"]
 
 この記事は[maccha Advent Calender 2024](https://adventar.org/calendars/10199)の6日目の記事です。
 
-昨日は(null)さんによる「(null)」でした。いやー、(null)さん史上一番面白い記事でしたね。
+昨日はmacchaさんによる[「Google Apps ScriptのソースコードをGitHubで管理し，claspによるデプロイ作業をGitHub Actionsで自動化する
+」](https://macchanism.hateblo.jp/entry/maccha_advent_calendar2024_day5)でした。
+
+あんまりGASを使ってはいない身ではあるものの、便利なことだけはわかるのでいつか使わせていただきます。
 
 ## 本題
 
