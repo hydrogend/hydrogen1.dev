@@ -7,16 +7,15 @@ const { href, class: className, ...props } = Astro.props;
 
 const { pathname } = Astro.url;
 const sub = pathname.match(/.([^\/]*?)\//g);
-const isActive = href === pathname || (sub && href === sub[0]);
+const isActive = href === pathname;
+const underline = isActive || (sub && href === sub[0]);
 ---
 
-{isActive ? <span class:list={[className, "underline"]}>
+{isActive ? <span class:list={[className, "underline", "font-semibold", "px-4", "py-2"]}>
 	<slot />
-</span> : <a href={href} class:list={[className, "underline", "ease-in-out", "delay-200", "duration-200", "decoration-transparent", "hover:decoration-black"]} {...props}>
+</span> : 
+underline ? <a href={href} class:list={[className, "underline", "font-semibold"]} {...props}>
+	<slot />
+</a> : <a href={href} class:list={[className, "underline", "ease-in-out", "delay-200", "duration-200", "decoration-transparent", "hover:decoration-black"]} {...props}>
 	<slot />
 </a>}
-<style>
-	span {
-		font-weight: bolder;
-	}
-</style>
