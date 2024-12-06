@@ -6,8 +6,8 @@ type Props = HTMLAttributes<'a'>;
 const { href, class: className, ...props } = Astro.props;
 
 const { pathname } = Astro.url;
-const subpath = pathname.match(/[^\/]+/g);
-const isActive = href === pathname || href === '/' + subpath?.[0];
+const sub = pathname.match(/.([^\/]*?)\//g);
+const isActive = href === pathname || (sub && href === sub[0]);
 ---
 
 {isActive ? <span class:list={[className, "underline"]}>
