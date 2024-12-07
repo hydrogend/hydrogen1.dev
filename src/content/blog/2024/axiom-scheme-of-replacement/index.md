@@ -1,6 +1,6 @@
 ---
 title: "置換公理図式"
-description: "hydrogen Advent Calender 2024 day 6"
+description: "hydrogen Advent Calender 2024 day 8"
 pubDate: "2024-12-08T12:15"
 # update: "2024-11-19T16:00"
 tags: ["hydrogen Advent Calender 2024", "数学", "集合論", "ZFC公理系"]
