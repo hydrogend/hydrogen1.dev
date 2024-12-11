@@ -1,7 +1,8 @@
 ---
-title: "Javaのリフレクションの細かい話"
+title: "Javaのリフレクションとコンストラクタ"
 description: "hydrogen Advent Calender 2024 day 11"
 pubDate: "2024-12-11T16:08"
+update: "2024-12-11T16:14"
 tags: ["hydrogen Advent Calender 2024", "Java", "Reflection"]
 ---
 
