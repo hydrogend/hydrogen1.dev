@@ -14,6 +14,27 @@ export default defineConfig({
     integrations: [mdx(), sitemap(), tailwind()],
     markdown: {
         remarkPlugins: [remarkMath],
-        rehypePlugins: [rehypeKatex],
+        rehypePlugins: [[rehypeKatex, {
+            macros: {
+                "\\RR": "\\mathbb{R}",
+                "\\CC": "\\mathbb{C}",
+                "\\ZZ": "\\mathbb{Z}",
+                "\\NN": "\\mathbb{N}",
+                "\\QQ": "\\mathbb{Q}",
+                "\\cf": "\\mathrm{cf}",
+                "\\dom": "\\mathrm{dom}",
+                "\\cod": "\\mathrm{cod}",
+                "\\id": "\\mathrm{id}",
+                "\\Im": "\\mathrm{Im}",
+                "\\Re": "\\mathrm{Re}",
+                "\\Hom": "\\mathrm{Hom}",
+                "\\Ker": "\\mathrm{Ker}",
+                "\\eps": "\\epsilon",
+                "\\defeqn": "\\overset{\\mathrm{def}}{\\Leftrightarrow}",
+                "\\defequiv": "\\stackrel{\\mathrm{def}}{\\equiv}",
+            },
+            strict: "ignore",
+            trust: (context) => context.command === "\\htmlStyle"
+        }]],
     },
 });
