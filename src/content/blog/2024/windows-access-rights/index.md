@@ -6,7 +6,11 @@ pubDate: "2024-12-17T15:50"
 tags: ["hydrogen Advent Calender 2024", "Windows"]
 ---
 
-この記事は[hydrogen Advent Calender 2024](https://adventar.org/calendars/10672)の17日目の記事です。
+この記事は[hydrogen Advent Calender 2024](https://adventar.org/calendars/10672)の17日目の記事です。[MMA Advent Calender 2024](https://adventar.org/calendars/10770)の17日目の記事でもあります。
+
+昨日の記事はshiragi君による[携帯電話番号を変えた話](https://www.mma.club.uec.ac.jp/~shiragi/post-1/)でした。
+
+もはや、記事がshiragi君一色になりつつあります。
 
 ## UNIX系のアクセス権
 
