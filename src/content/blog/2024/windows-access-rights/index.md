@@ -2,8 +2,8 @@
 title: "Windowsのアクセス制御"
 description: "hydrogen Advent Calender 2024 day 17"
 pubDate: "2024-12-17T15:50"
-# update: "2024-11-19T16:00"
-tags: ["hydrogen Advent Calender 2024", "Windows"]
+update: "2024-12-17T18:50"
+tags: ["hydrogen Advent Calender 2024", "MMA Advent Calender 2024", "Windows"]
 ---
 
 この記事は[hydrogen Advent Calender 2024](https://adventar.org/calendars/10672)の17日目の記事です。[MMA Advent Calender 2024](https://adventar.org/calendars/10770)の17日目の記事でもあります。
@@ -49,4 +49,4 @@ Windowsにおけるファイルの権限はUNIX系とはまったく異なる仕
 
 実はこのACLはWindows上のセキュリティ保護可能なありとあらゆるものに付与されており、それをセキュリティ保護可能なオブジェクトという。
 
-ファイルのほかにレジストリ、プロセスなどもそのようなオブジェクトであり、実はACLが設定されている。WindowsにおいてACLがどれほど重要なシステムであるかがうかがえる。
+ファイルのほかにレジストリもそのようなオブジェクトであり、実はACLが設定されている。WindowsにおいてACLがどれほど重要なシステムであるかがうかがえる。
