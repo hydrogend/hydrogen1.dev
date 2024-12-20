@@ -2,7 +2,7 @@
 title: "Windowsでsuしたい"
 description: "hydrogen Advent Calender 2024 day 19"
 pubDate: "2024-12-19T18:56"
-# update: "2024-11-19T16:00"
+update: "2024-12-20T16:27"
 tags: ["hydrogen Advent Calender 2024", "Windows"]
 ---
 
@@ -35,20 +35,35 @@ Windowsでsuしたい。単に管理者権限で実行するのではなく、�
 Rustで実装したものが[こちら](https://github.com/hydrogend/token-steal-sample/blob/master/src/main.rs)である。
 
 ```rust
-    let res= unsafe { OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION, false, pid) };
+    let handle = unsafe {
+        let pid: u32 = arg[1].parse::<u32>()?;
+        OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION, false, pid)?
+    };
+    let token = unsafe {
+        let mut token = HANDLE::default();
+        OpenProcessToken(
+            handle,
+            TOKEN_DUPLICATE,
+            &mut token
+        )?;
+        token
+    };
     ...
-    let handle: HANDLE = res.unwrap();
-    let r2 = unsafe { OpenProcessToken(handle, TOKEN_DUPLICATE, &mut token) };
+    let prim_token = unsafe {
+        let mut mtoken = HANDLE::default();
+        DuplicateTokenEx(
+            token,
+            TOKEN_ALL_ACCESS,
+            None,
+            SecurityAnonymous,
+            TokenPrimary,
+            &mut mtoken
+        )?;
+        mtoken
+    };
     ...
-    let r3 = unsafe { DuplicateTokenEx(token,
-        TOKEN_ALL_ACCESS,
-        None,
-        SecurityAnonymous,
-        TokenPrimary,
-        &mut prim_token) };
-    ...
-    let lpstartupinfo: STARTUPINFOW = STARTUPINFOW {
-        cb: std::mem::size_of::<STARTUPINFOW>() as u32,
+    let lpstartupinfo = STARTUPINFOW {
+        cb: size_of::<STARTUPINFOW>() as u32,
         lpReserved: PWSTR::null(),
         lpDesktop: PWSTR::null(),
         lpTitle: PWSTR::null(),
@@ -68,15 +83,19 @@ Rustで実装したものが[こちら](https://github.com/hydrogend/token-steal
         hStdError: stderr,
     };
     ...
-    let r4 = unsafe { CreateProcessWithTokenW(prim_token,
-        LOGON_WITH_PROFILE,
-        None,
-        PWSTR::from_raw(cmd),
-        CREATE_NEW_CONSOLE,
-        None,
-        None,
-        &lpstartupinfo,
-        &mut info) };
+    unsafe {
+        CreateProcessWithTokenW(
+            prim_token,
+            LOGON_WITH_PROFILE,
+            None,
+            PWSTR::from_raw(cmd),
+            CREATE_NEW_CONSOLE,
+            None,
+            None,
+            &lpstartupinfo,
+            &mut PROCESS_INFORMATION::default(),
+        )?
+    };
     ...
 ```
 
@@ -102,3 +121,7 @@ nt authority\system
 このプログラムで切り替えられるユーザーは、実行中のプロセスが存在するものに限られる。それゆえにまだログインしていないユーザーに切り替えることはできない。
 
 Windowsにおいては、ログインしていないユーザーに切り替えることは通常の手段では不可能である。
+
+## 謝辞
+
+ryota2357さんにコードを少し修正していただきました。ありがとうございます。
