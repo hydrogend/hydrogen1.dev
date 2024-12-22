@@ -3,7 +3,7 @@ title: "PowershellにC#のコードを埋め込める話"
 description: "hydrogen Advent Calender 2024 day 22"
 pubDate: "2024-12-22T22:02"
 # update: "2024-11-19T16:00"
-tags: ["hydrogen Advent Calender 2024", "Windows", "Powershell", "C#"]
+tags: ["hydrogen Advent Calender 2024", "Windows", "Powershell", "CSharp"]
 ---
 
 この記事は[hydrogen Advent Calender 2024](https://adventar.org/calendars/10672)の22日目の記事です。
