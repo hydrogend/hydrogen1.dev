@@ -32,6 +32,7 @@ export default defineConfig({
                 "\\eps": "\\epsilon",
                 "\\defeqn": "\\overset{\\mathrm{def}}{\\Leftrightarrow}",
                 "\\defequiv": "\\stackrel{\\mathrm{def}}{\\equiv}",
+                "\\eqn": "\\Leftrightarrow",
             },
             strict: "ignore",
             trust: (context) => context.command === "\\htmlStyle"
