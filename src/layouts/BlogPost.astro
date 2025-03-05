@@ -8,7 +8,7 @@ import TagIcon from "@/assets/topecon-heroes-tag.svg";
 
 type Props = BlogPost;
 
-const { title, description, post, update, tags } = Astro.props;
+const { title, description, pubDate, update, tags } = Astro.props;
 ---
 
 <Base title={title} description={description} type="article">
@@ -17,7 +17,7 @@ const { title, description, post, update, tags } = Astro.props;
 			<h1>{title}</h1>
 			<div class="date">
 				<div class="posted-on">
-					投稿日: <FormattedDate date={post} />
+					投稿日: <FormattedDate date={pubDate} />
 				</div>
 				{
 					update && (

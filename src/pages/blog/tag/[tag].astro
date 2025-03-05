@@ -14,7 +14,7 @@ export const getStaticPaths = (() => {
 }) satisfies GetStaticPaths;
 
 const { tagName, posts } = Astro.props;
-posts.sort((a, b) => b.data.post.valueOf() - a.data.post.valueOf());
+posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <Base title={`Tag for ${tagName}`} type="website">

@@ -1,9 +1,9 @@
 ---
 title: "hydrogen Advent Calender 2024 day1"
 description: "開会の辞"
-post: "2024-12-01T00:08"
-update: "2024-12-01T00:11"
-tags: ["hydrogen Advent Calender 2024"]
+pubDate: "2024-12-01T00:08"
+update: "2024-12-25T00:00"
+tags: ["hydrogen Advent Calender 2024", "雑記"]
 ---
 
 ## くだらない前置きのようなもの

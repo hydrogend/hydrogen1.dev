@@ -1,7 +1,7 @@
 ---
 title: "Pythonの型ヒントの話"
 description: "hydrogen Advent Calender 2024 day 2"
-post: "2024-12-02T13:21"
+pubDate: "2024-12-02T13:21"
 # update: "2024-11-19T16:00"
 tags: ["hydrogen Advent Calender 2024","Python", "MyPy"]
 ---
