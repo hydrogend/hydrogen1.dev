@@ -38,8 +38,8 @@ const latestPosts = [...allBlogPosts]
                 <p class="m-0 flex-none text-lg font-semibold">最新記事</p>
                 <ul class="mx-0 my-auto list-disc list-inside">
                     {
-                        latestPosts.map(({ data, slug }) => {
-                            const { year, rest } = digestSlug(slug);
+                        latestPosts.map(({ data, id }) => {
+                            const { year, rest } = digestSlug(id);
                             return (
                                 <li class="p-1">
                                     <a class="text-black" href={`/blog/${year}/${rest}/`}>

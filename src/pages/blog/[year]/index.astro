@@ -7,7 +7,7 @@ import BlogPosts from "@/components/BlogPosts.astro";
 export const getStaticPaths = (() => {
     const years: Record<number, BlogPostMeta[]> = {};
     allBlogPosts.forEach((post) => {
-        const year = digestSlug(post.slug).year;
+        const year = digestSlug(post.id).year;
         if (!years[year]) {
             years[year] = [post];
         } else {
