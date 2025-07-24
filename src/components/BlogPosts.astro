@@ -16,7 +16,7 @@ const { posts } = Astro.props;
             <p class="date m-0">
                 <FormattedDate date={post.data.pubDate} />
             </p>
-            <a href={`/blog/${post.slug}/`} class="text-black">
+            <a href={`/blog/${post.id}/`} class="text-black">
                 <h4 class="title">{post.data.title}</h4>
             </a>
             <div class="text-right">
