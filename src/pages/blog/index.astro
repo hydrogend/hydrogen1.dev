@@ -1,9 +1,9 @@
 ---
 import Base from '@/layouts/Base.astro';
-import { allBlogPosts } from '@/content';
+import { allPublicBlogPosts } from '@/content';
 import BlogPosts from '@/components/BlogPosts.astro';
 
-const posts = [...allBlogPosts].sort(
+const posts = [...allPublicBlogPosts].sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---

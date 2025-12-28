@@ -1,13 +1,13 @@
 ---
 import Base from "@/layouts/Base.astro";
-import { allTags, allBlogPosts, digestSlug } from "@/content";
+import { allTags, allPublicBlogPosts, digestSlug } from "@/content";
 
 const tagsRanking = [...allTags]
     .sort((a, b) => a.tag.localeCompare(b.tag))
     .sort((a, b) => b.count - a.count)
     .slice(0, 5);
 
-const latestPosts = [...allBlogPosts]
+const latestPosts = [...allPublicBlogPosts]
     .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
     .slice(0, 5);
 ---

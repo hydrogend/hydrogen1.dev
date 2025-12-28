@@ -1,12 +1,12 @@
 ---
 import type { GetStaticPaths } from "astro";
 import Base from "@/layouts/Base.astro"
-import { allBlogPosts, digestSlug, type BlogPostMeta } from "@/content"
+import { allPublicBlogPosts, digestSlug, type BlogPostMeta } from "@/content"
 import BlogPosts from "@/components/BlogPosts.astro";
 
 export const getStaticPaths = (() => {
     const years: Record<number, BlogPostMeta[]> = {};
-    allBlogPosts.forEach((post) => {
+    allPublicBlogPosts.forEach((post) => {
         const year = digestSlug(post.id).year;
         if (!years[year]) {
             years[year] = [post];
