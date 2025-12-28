@@ -6,7 +6,7 @@ export async function GET(context) {
 		title: "Hydrogen Home Space",
 		description: "Hydrogen's Site",
 		site: context.site,
-		items: allBlogPosts.map((post) => ({
+		items: allPublicBlogPosts.map((post) => ({
 			...post.data,
 			link: `/blog/${post.id}/`,
 		})),
