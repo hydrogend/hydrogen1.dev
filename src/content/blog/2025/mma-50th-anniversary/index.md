@@ -9,7 +9,7 @@ limited: true
 
 この記事は[UEC Advent Calender 2025](https://adventar.org/calendars/11571)の19日目の記事です。
 
-前日の記事はトナカイさんの[ペーパードライバーに向けたカーシェア活用法](javascript::void())です。どうも遅刻らしいです。私も大遅刻しました。
+前日の記事はトナカイさんの[ペーパードライバーに向けたカーシェア活用法](javascript::void())です。遅刻らしいです。私も大遅刻しました。
 
 ## はじめに
 
