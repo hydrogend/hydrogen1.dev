@@ -1,5 +1,5 @@
 import rss from '@astrojs/rss';
-import { allBlogPosts } from '@/content';
+import { allPublicBlogPosts } from '@/content';
 
 export async function GET(context) {
 	return rss({
