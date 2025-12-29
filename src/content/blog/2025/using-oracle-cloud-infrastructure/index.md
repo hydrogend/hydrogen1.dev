@@ -6,7 +6,7 @@ pubDate: "2025-12-30T07:04"
 tags: ["whywaita Advent Calender 2025", "Oracle Cloud Infrastructure"]
 ---
 
-この記事は[whywaita Advent Calender 2025](https://adventar.org/calendars/11433)の19日目の記事です。大遅刻しました。
+この記事は[whywaita Advent Calender 2025](https://adventar.org/calendars/11433)の19日目の記事です。大遅刻しました、申し訳ないです……
 
 前日の記事はtwismikoさんの[時を超えてGenAIでおいでませ！！whywaita Chatbot！！（簡略版）](https://twismik0.hatenablog.com/entry/2025/12/23/233443)でした。近年の技術の進歩はすさまじいですね。1人に1つwhywaita chatbotの時代がいつの日か訪れることでしょう。ちなみに私もあおかなをやっています。時間が足りないので進みはあまりよろしくないですが。
 
@@ -271,7 +271,7 @@ java -jar server.jar
 
 ## おわりに
 
-大遅刻しました。一応遅刻の連絡はして、「日曜までには出ます」といったのですが時間が足りないので日曜日を延長しました。これにて、ようやく私の55時間にわたる日曜日は終わったのでした。
+大遅刻しました。一応遅刻の連絡はして、「日曜までには出ます」とは言ったのですが結局時間が足りないので日曜日を延長しました。これにて、ようやく私の55時間にわたる日曜日は終わったのでした。
 
 ![日曜日を延長する様子](long-sunday.png)
 
