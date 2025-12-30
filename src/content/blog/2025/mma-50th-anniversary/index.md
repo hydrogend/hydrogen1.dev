@@ -1,10 +1,9 @@
 ---
 title: "MMA創立50周年記念パーティーの裏話"
 description: "UEC Advent Calender day 19"
-pubDate: "2025-12-29T01:13"
+pubDate: "2025-12-30T18:55"
 # update: "2025-12-01T14:21"
 tags: ["UEC Advent Calender 2025", "MMA"]
-limited: true
 ---
 
 この記事は[UEC Advent Calender 2025](https://adventar.org/calendars/11571)の19日目の記事です。
@@ -66,3 +65,5 @@ limited: true
 当日は会の進行などで手間取りながらの進行でしたが、無事に50周年記念パーティーを終えることが出来ました。MMA関係者の皆様には改めて御礼申し上げます。
 
 <blockquote class="twitter-tweet tw-align-center"><p lang="ja" dir="ltr">MMA創立50周年記念パーティーの主幹事をさせていただきました。なんだかんだありつつも、無事に会を終えることが出来ました。MMAのOB/OGのみなさま、歴代顧問の皆様、現役部員の皆様並びに運営に協力していただいた方々には心から感謝申し上げます。 <a href="https://twitter.com/hashtag/mma50th?src=hash&amp;ref_src=twsrc%5Etfw">#mma50th</a></p>&mdash; 水素 (@Hydrogen_D1) <a href="https://twitter.com/Hydrogen_D1/status/1982083259631869970?ref_src=twsrc%5Etfw">October 25, 2025</a></blockquote>
+
+明日の記事は、電2（でんじ）さんによる「なにもかんがえてない」らしいです。彼も遅刻しているとのことです。
