@@ -27,7 +27,7 @@ const { title, description, pubDate, update, tags, limited } = Astro.props;
 					)
 				}
 			</div>
-			<div class="tags">
+			<div class="tags flex flex-wrap items-center gap-2">
 				<Image src={TagIcon} alt="Tags" class="w-5 h-5 inline" />
 				{tags.map((tag) => (
 					<a href={`/blog/tag/${tag}`} class="tag">

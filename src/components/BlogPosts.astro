@@ -19,10 +19,10 @@ const { posts } = Astro.props;
             <a href={`/blog/${post.id}/`} class="text-black">
                 <h4 class="title">{post.data.title}</h4>
             </a>
-            <div class="text-right">
+            <div class="flex flex-wrap justify-end gap-1 text-right">
                 {post.data.tags.map((tag) => (
-                    <a href={`/blog/tag/${tag}`} class="text-gray-50 hover:text-white hover:underline">
-                        <span class="bg-black rounded p-1">{tag}</span>
+                    <a href={`/blog/tag/${tag}`} class="hover:underline">
+                        <span class="bg-black rounded p-1 text-white">{tag}</span>
                     </a>
                 ))}
             </div>

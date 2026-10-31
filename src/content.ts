@@ -16,10 +16,9 @@ export function getBlogPostsByTag(tag: string): CollectionEntry<"blog">[] {
     return allPublicBlogPosts.filter(post => post.data.tags.includes(tag));
 }
 
-export function digestSlug(slug: string): { year: number, rest: string } {
+export function digestSlug(slug: string): { year: string, rest: string } {
     const match = slug.match(/^(\d{4})\/([^\/]+)$/);
     if (!match) throw new Error(`Invalid slug: ${slug}`);
     const [, yearStr, rest] = match;
-    const year = parseInt(yearStr);
-    return { year, rest };
+    return { year: yearStr, rest };
 }
